@@ -8,6 +8,7 @@
         </x-slot>
         <x-slot name="th">
           <th>#</th>
+          <th>الصورة</th>
           <th>الأيقونة</th>
           <th>الاسم</th>
           <th>المحتوى</th>
@@ -19,6 +20,7 @@
             @foreach ($services as $i)
             <tr>
                 <td  width="2%">{{ $loop->iteration }}</td>
+                <td width="10%"><x-page.td-image :image="$i->image"/></td>
                 <td width="10%">{{ $i->iconName }}</td>
                 <td width="10%">{{ $i->name_ar }}</td>
                 <td width="40%">{{ $i->content_ar }}</td>

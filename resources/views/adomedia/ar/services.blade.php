@@ -25,7 +25,7 @@
                     class="icon-lg icon-box bg-gradient-primary rounded-circle {{ $i->iconName }} mb-5 d-inline-block text-white"></i>
                   <i class="icon-lg icon-watermark text-white {{ $i->iconName }}"></i>
                 </div>
-                <h4 class="mb-4">{{ $i->name_ar }}</h4>
+                <a href="{{ route('adomedia.service',$i->id) }}"> <h4 class="mb-4">{{ $i->name_ar }}</h4></a>
                 <p>{{ $i->content_ar }}</p>
               </div>
             </div>

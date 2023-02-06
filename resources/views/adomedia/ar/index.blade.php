@@ -33,7 +33,7 @@
                     class="icon-lg icon-box bg-gradient-primary rounded-circle {{ $i->iconName }} mb-5 d-inline-block text-white"></i>
                   <i class="icon-lg icon-watermark text-white {{ $i->iconName }}"></i>
                 </div>
-                <h4 class="mb-4">{{ $i->name_ar }}</h4>
+                <a href="{{ route('adomedia.service',$i->id) }}"> <h4 class="mb-4">{{ $i->name_ar }}</h4></a>
                 <p>{{ $i->content_ar }}</p>
               </div>
             </div>
@@ -81,7 +81,7 @@
 
 <!-- project -->
 <section class="section">
-  <div class="container-fluid px-0">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-lg-10 mx-auto text-center">
         <h2>أعمالنا</h2>
@@ -139,7 +139,7 @@
                 @endforelse
 
                 </ul>
-                <a href="tel:+970597676950" target="_blank" class="btn btn-outline-light">Try it now</a>
+                <a href="tel:+970597676950" target="_blank" class="btn btn-outline-light">حاول الأن</a>
               </div>
             </div>
           </div>
@@ -169,7 +169,7 @@
               <div class="card-body p-0">
                 <time>{{ $i->created_at->format('Y/M/D |h')."hour" }}</time>
                 <a href="{{ route('adomedia.blog',$i->id) }}" class="h4 card-title d-block my-3 text-dark hover-text-underline">{{$i->title_ar}}</a>
-                <a href="{{ route('adomedia.blog',$i->id) }}" class="btn btn-transparent">Read more</a>
+                <a href="{{ route('adomedia.blog',$i->id) }}" class="btn btn-transparent">إقرأ المزيد</a>
               </div>
             </article>
           </div>

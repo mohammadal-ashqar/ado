@@ -540,8 +540,9 @@ textarea.form-control {
   transition: 0.3s ease;
 }
 .navigation.nav-bg {
-  background-color: #07085d;
-  padding: 15px 100px;
+  background-color: rgb(252, 252, 252);
+  padding: 10px 100px;
+
 }
 @media (max-width: 991px) {
   .navigation.nav-bg {
@@ -589,8 +590,10 @@ textarea.form-control {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: #fff;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
 }
+
 
 .banner {
   min-height: 100vh;

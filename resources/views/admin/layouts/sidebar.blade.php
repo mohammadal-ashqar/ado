@@ -19,6 +19,10 @@
                 <li class="side-item side-item-category">لوحة التحكم</li>
                 <x-admin.single-side name="Home" lable="الرئيسية" :route="route('admin.index')" icon="fe fe-home" />
 
+                @can('visits-list')
+                <x-admin.single-side name="visits" lable="الزيارات" :route="route('admin.visits')" icon="fe fe-eye" />
+                @endcan
+
                 <li class="side-item side-item-category">إدارة المحتوى</li>
                 <x-admin.side-bar name="polls" lable="الآراء" :home="route('admin.polls.index')" :create="route('admin.polls.create')" icon="fe fe-message-circle"/>
                 <x-admin.side-bar name="team" lable="الفريق" :home="route('admin.team.index')" :create="route('admin.team.create')" icon="fe fe-user"/>
@@ -27,9 +31,9 @@
                 <x-admin.side-bar name="package" lable="الباقات" :home="route('admin.package.index')" :create="route('admin.package.create')" icon="fe fe-shopping-cart"/>
                 <x-admin.side-bar name="project" lable="المشاريع" :home="route('admin.project.index')" :create="route('admin.project.create')" icon="fe fe-layers"/>
                 <x-admin.side-bar name="blog" lable="المدونة" :home="route('admin.blog.index')" :create="route('admin.blog.create')" icon="fe fe-file-text"/>
-                <x-admin.side-bar name="users" lable="المستخدمين" :home="route('admin.users.index')" :create="route('admin.users.create')" icon="fe fe-users"/>
-                <x-admin.side-bar name="roles" lable="الصلاحيات" :home="route('admin.roles.index')" :create="route('admin.roles.create')" icon="fe fe-lock"/>
-              
+                <x-admin.side-bar name="user" lable="المستخدمين" :home="route('admin.user.index')" :create="route('admin.user.create')" icon="fe fe-users"/>
+                <x-admin.side-bar name="role" lable="الصلاحيات" :home="route('admin.role.index')" :create="route('admin.role.create')" icon="fe fe-lock"/>
+
 
             </ul>
             <div class="slide-right" id="slide-right"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191"

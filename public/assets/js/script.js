@@ -12,8 +12,15 @@
   $(window).scroll(function () {
     if ($('.navigation').offset().top > 100) {
       $('.navigation').addClass('nav-bg');
+      $('.navigation .navbar-nav .nav-item').removeClass('active');
+
+      $('.navbar-brand  img').attr('src', '../../assets/images/ado-full-dark.png');
     } else {
+
       $('.navigation').removeClass('nav-bg');
+      $('.navigation .navbar-nav .nav-item').addClass('active');
+      $('.navbar-brand  img').attr('src', '../../assets/images/ado-fulllogo.png');
+
     }
   });
 
@@ -24,7 +31,7 @@
     });
   });
 
-  // venobox popup 
+  // venobox popup
   $('.venobox').venobox();
 
   // dropdown menu
@@ -35,6 +42,7 @@
   });
   navcollapse.hover(function () {
     if ($(window).innerWidth() >= mobileWidth) {
+
       $(this).children('.dropdown-menu').stop(true, false, true).slideToggle(250);
     }
   });

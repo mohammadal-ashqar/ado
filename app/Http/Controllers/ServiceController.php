@@ -2,13 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Symfony\Component\HttpFoundation\Response;
 
 class ServiceController extends Controller
 {
+    function __construct()
+    {
+        $this->middleware('permission:service-list|service-create|service-edit|service-delete', ['only' => ['index', 'store']]);
+        $this->middleware('permission:service-create', ['only' => ['create', 'store']]);
+        $this->middleware('permission:service-edit', ['only' => ['edit', 'update']]);
+        $this->middleware('permission:service-delete', ['only' => ['destroy']]);
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -44,10 +54,16 @@ class ServiceController extends Controller
         $request->merge([
             'auther' => Auth::user()->name,
         ]);
-        $data = $request->except('list_en','list_ar');
+        $data = $request->except('list_en','list_ar','image');
         $data['list_en'] = json_encode($request->list_en);
         $data['list_ar'] = json_encode($request->list_ar);
 
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $name = rand() . time() . $file->getClientOriginalName();
+            $path = $file->storeAs('uploads/service', $name, ['disk' => 'public']);
+            $data['image'] = $path;
+        }
         Service::create($data);
         $notification =  array(
             'message' => 'تم الاضافة بنجاح',
@@ -76,6 +92,7 @@ class ServiceController extends Controller
      */
     public function edit(Service $service)
     {
+
         $n = json_decode($service->list_ar);
         $n2 = json_decode($service->list_en);
         return view('admin.services.edit',compact('service','n','n2'));
@@ -95,10 +112,18 @@ class ServiceController extends Controller
         $request->merge([
             'auther' => Auth::user()->name,
         ]);
-        $data = $request->except('list_en','list_ar');
+        $old_image = $service->image;
+        $data = $request->except('list_en','list_ar','image');
         $data['list_en'] = json_encode($request->list_en);
         $data['list_ar'] = json_encode($request->list_ar);
-
+        $data['image'] = $old_image;
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $name = rand() . time() . $file->getClientOriginalName();
+            $path = $file->storeAs('uploads/service', $name, ['disk' => 'public']);
+            $data['image'] = $path;
+            Storage::disk('public')->delete($old_image);
+        }
         $service->update($data);
         $notification =  array(
             'message' => 'تم تعديل الخبر بنجاح',
@@ -118,7 +143,7 @@ class ServiceController extends Controller
     public function destroy(Service $service)
     {
         $isDeleted = $service->delete();
-
+        Storage::disk('public')->delete($service->image);
         if ($isDeleted) {
             return response()->json([
                 'title' => 'تم الحذف بنجاح',

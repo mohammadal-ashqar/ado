@@ -10,6 +10,14 @@ use Symfony\Component\HttpFoundation\Response;
 
 class PackageController extends Controller
 {
+    function __construct()
+    {
+        $this->middleware('permission:package-list|package-create|package-edit|package-delete', ['only' => ['index', 'store']]);
+        $this->middleware('permission:package-create', ['only' => ['create', 'store']]);
+        $this->middleware('permission:package-edit', ['only' => ['edit', 'update']]);
+        $this->middleware('permission:package-delete', ['only' => ['destroy']]);
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *

@@ -72,6 +72,8 @@
 
     <!-- Back-to-top -->
     <a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
+    <!-- Back-to-top -->
+    <a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
 
     <!-- JQuery min js -->
     <script src="{{ asset('cms/assets/plugins/jquery/jquery.min.js') }}"></script>
@@ -93,20 +95,22 @@
     <script src="{{ asset('cms/assets/plugins/raphael/raphael.min.js') }}"></script>
 
     <!--Internal Apexchart js-->
-    <script src="{{ asset('cms/assets/js/apexcharts.js') }}"></script>
+    {{-- <script src="{{ asset('cms/assets/js/apexcharts.js') }}"></script> --}}
 
     <!-- Rating js-->
-    <script src="{{ asset('cms/assets/plugins/ratings-2/jquery.star-rating.js') }}"></script>
-    <script src="{{ asset('cms/assets/plugins/ratings-2/star-rating.js') }}"></script>
+    {{-- <script src="{{ asset('cms/assets/plugins/ratings-2/jquery.star-rating.js') }}"></script>
+    <script src="{{ asset('cms/assets/plugins/ratings-2/star-rating.js') }}"></script> --}}
 
     <!--Internal  Perfect-scrollbar js -->
+
     <script src="{{ asset('cms/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
-    <script src="{{ asset('cms/assets/plugins/perfect-scrollbar/p-scroll.js') }}"></script>
+    {{-- <script src="{{ asset('cms/assets/plugins/perfect-scrollbar/p-scroll.js') }}"></script> --}}
 
     <!-- Eva-icons js -->
     <script src="{{ asset('cms/assets/js/eva-icons.min.js') }}"></script>
 
     <!-- right-sidebar js -->
+      <!--  i commit some data in this file -->
     <script src="{{ asset('cms/assets/plugins/sidebar/sidebar.js') }}"></script>
     <script src="{{ asset('cms/assets/plugins/sidebar/sidebar-custom.js') }}"></script>
 
@@ -118,26 +122,29 @@
     <script src="{{ asset('cms/assets/plugins/side-menu/sidemenu.js') }}"></script>
 
     <!-- Internal Map -->
-    <script src="{{ asset('cms/assets/plugins/jqvmap/jquery.vmap.min.js') }}"></script>
-    <script src="{{ asset('cms/assets/plugins/jqvmap/maps/jquery.vmap.usa.js') }}"></script>
+    {{-- <script src="{{ asset('cms/assets/plugins/jqvmap/jquery.vmap.min.js') }}"></script>
+    <script src="{{ asset('cms/assets/plugins/jqvmap/maps/jquery.vmap.usa.js') }}"></script> --}}
 
     <!--Internal  index js -->
+    <!--  i commit some data in this file -->
     <script src="{{ asset('cms/assets/js/index.js') }}"></script>
 
     <!--themecolor js-->
     <script src="{{ asset('cms/assets/js/themecolor.js') }}"></script>
 
     <!-- Apexchart js-->
-    <script src="{{ asset('cms/assets/js/apexcharts.js') }}"></script>
-    <script src="{{ asset('cms/assets/js/jquery.vmap.sampledata.js') }}"></script>
+    {{-- <script src="{{ asset('cms/assets/js/apexcharts.js') }}"></script>
+    <script src="{{ asset('cms/assets/js/jquery.vmap.sampledata.js') }}"></script> --}}
 
     <!-- custom js -->
     <script src="{{ asset('cms/assets/js/custom.js') }}"></script>
 
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <!-- data table-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- data table-->
     <script src="{{ asset('cms/assets/plugins/datatable/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('cms/assets/plugins/datatable/js/dataTables.bootstrap5.js') }}"></script>
     <script src="{{ asset('cms/assets/plugins/datatable/js/dataTables.buttons.min.js') }}"></script>
@@ -151,8 +158,13 @@
     <script src="{{ asset('cms/assets/plugins/datatable/dataTables.responsive.min.js') }}"></script>
     <script src="{{ asset('cms/assets/plugins/datatable/responsive.bootstrap5.min.js') }}"></script>
     <script src="{{ asset('cms/assets/js/table-data.js') }}"></script>
+    <!-- form js -->
     <script src="{{ asset('cms/assets/plugins/select2/js/select2.min.js') }}"></script>
+      <!--  i commit some data in this file -->
     <script src="{{ asset('cms/assets/js/form-elements.js') }}"></script>
+    <script src="{{ asset('cms/assets/plugins/sumoselect/jquery.sumoselect.js') }}"></script>
+    <script src="{{ asset('cms/assets/js/advanced-form-elements.js') }}"></script>
+
     <!-- Internal Owl Carousel js-->
     <script src="{{ asset('cms/assets/plugins/owl-carousel/owl.carousel.js') }}"></script>
 
@@ -160,21 +172,11 @@
     <script src="{{ asset('cms/assets/plugins/multislider/multislider.js') }}"></script>
     <script src="{{ asset('cms/assets/js/carousel.js') }}"></script>
     <script src="{{ asset('cms/assets/plugins/inputtags/inputtags.js') }}"></script>
+
+    <!-- tiny editor js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.1.2/tinymce.min.js"
         integrity="sha512-cJ2vUNryvHzgNJfmFTtZ2VX5EMT5JOU1i8nm+L1kwoHQ9bSqSYdswxyk++9Gi27p3BG2rXZXLMsTsluY4RZSSw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    {{-- <!--Internal Fileuploads js-->
-		<script src="{{ asset('cms/assets/plugins/fileuploads/js/fileupload.js')}}"></script>
-        <script src="{{ asset('cms/assets/plugins/fileuploads/js/file-upload.js')}}"></script>
-
-		<!--Internal Fancy uploader js-->
-		<script src="{{ asset('cms/assets/plugins/fancyuploder/jquery.ui.widget.js')}}"></script>
-        <script src="{{ asset('cms/assets/plugins/fancyuploder/jquery.fileupload.js')}}"></script>
-        <script src="{{ asset('cms/assets/plugins/fancyuploder/jquery.iframe-transport.js')}}"></script>
-        <script src="{{ asset('cms/assets/plugins/fancyuploder/jquery.fancy-fileupload.js')}}"></script>
-        <script src="{{ asset('cms/assets/plugins/fancyuploder/fancy-uploader.js')}}"></script> --}}
-
     <script>
         tinymce.init({
             selector: '#textarea',
@@ -190,6 +192,7 @@
 
         });
     </script>
+    <!-- error massege code by toastar-->
     <script>
         @if (Session::has('message'))
             var type = "{{ Session::get('alert-type', 'info') }}"
@@ -220,6 +223,7 @@
         }
     </script>
     @yield('scripts')
+    <!-- hide alert after time-->
     <script>
         setTimeout(() => {
             $('.alert').fadeOut();

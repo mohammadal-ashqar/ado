@@ -6,6 +6,7 @@
         @csrf
 
         <x-form.card card_lable="اضافة خدمة ">
+            <x-form.input name="image" lable="صورة" type="file" />
 
             <x-form.input name="iconName" lable="الأيقونة" />
             <x-form.input name="name_ar" lable="الاسم" />

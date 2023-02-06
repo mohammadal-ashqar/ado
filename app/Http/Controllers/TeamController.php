@@ -10,6 +10,14 @@ use Symfony\Component\HttpFoundation\Response;
 
 class TeamController extends Controller
 {
+    function __construct()
+    {
+        $this->middleware('permission:team-list|team-create|team-edit|team-delete', ['only' => ['index', 'store']]);
+        $this->middleware('permission:team-create', ['only' => ['create', 'store']]);
+        $this->middleware('permission:team-edit', ['only' => ['edit', 'update']]);
+        $this->middleware('permission:team-delete', ['only' => ['destroy']]);
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *

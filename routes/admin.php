@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PollController;
@@ -21,6 +23,7 @@ Route::middleware('auth')->group(function () {
 Route::prefix('admin')->middleware(['auth'])->name('admin.')->group(function () {
 
     Route::get('/', [AdminController::class, 'index'])->name('index');
+    Route::get('/visits', [AdminController::class, 'visits'])->name('visits');
     Route::get('/profile', [AdminController::class, 'profile'])->name('profile');
     Route::resource('/polls', PollController::class);
     Route::resource('/team', TeamController::class);
@@ -29,7 +32,7 @@ Route::prefix('admin')->middleware(['auth'])->name('admin.')->group(function () 
     Route::resource('/package', PackageController::class);
     Route::resource('/project', ProjectController::class);
     Route::resource('/blog', BlogController::class);
-    Route::resource('/users', BlogController::class);
-    Route::resource('/roles', BlogController::class);
+    Route::resource('/user', UserController::class);
+    Route::resource('/role', RoleController::class);
 
 });

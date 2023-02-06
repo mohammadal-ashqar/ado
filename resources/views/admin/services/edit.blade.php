@@ -7,6 +7,7 @@
         @method('PUT')
 
         <x-form.card card_lable="اضافة خدمة ">
+            <x-form.input name="image" lable="صورة" type="file" />
 
             <x-form.input name="iconName" lable="الأيقونة" :value="$service->iconName" />
             <x-form.input name="name_ar" lable="الاسم" :value="$service->name_ar" />

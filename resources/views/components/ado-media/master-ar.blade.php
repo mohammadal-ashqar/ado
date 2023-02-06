@@ -66,6 +66,26 @@
         font-family: 'Tajawal', sans-serif;
 
     }
+
+    /* Button style */
+    .btn {
+        font-size: 25px;
+        font-family: 'Cairo', sans-serif;
+        font-family: 'Tajawal', sans-serif;
+
+
+    }
+
+    .font-primary {
+        font-family: 'Cairo', sans-serif !important;
+        font-family: 'Tajawal', sans-serif !important;
+    }
+
+    .font-secondary {
+
+        font-family: 'Cairo', sans-serif !important;
+        font-family: 'Tajawal', sans-serif !important;
+    }
 </style>
 
 <body>
@@ -77,7 +97,7 @@
                     src="{{ asset('assets/images/ado-fulllogo.png') }}" alt="Egen" width="100px"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
                 aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <i class=" icon-lg   ti-menu  text-dark"></i>
             </button>
 
             <div class="collapse navbar-collapse text-center" id="navigation" style="font-size: 30px; ">
@@ -85,22 +105,22 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="{{ route('adomedia.ar.index', 'index') }}">الرئيسية</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="{{ route('adomedia.ar.index', 'about') }}">من نحن</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="{{ route('adomedia.ar.index', 'services') }}">خدماتنا</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="{{ route('adomedia.ar.index', 'blog') }}">المدونة</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="{{ route('adomedia.ar.index', 'portfolio') }}">أعمالنا</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="{{ route('adomedia.ar.index', 'contact') }}">توصل معنا</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item active dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false"><span class="ti-world"></span></a>
                         <div class="dropdown-menu" style="display: none;">
@@ -137,11 +157,8 @@
                                     href="https://www.instagram.com/adomedia.ar.ps/"><i class="ti-instagram"></i></a>
                             </li>
                             <li class="list-inline-item"><a class="d-block p-lg-4 text-white " href="#"><i
-                                        class="ti-github"></i></a></li>
-                            <li class="list-inline-item"><a class="d-block p-lg-4 text-white  " href="#"><i
-                                        class="ti-facebook"></i></a></li>
-                            <li class="list-inline-item"><a class="d-block p-lg-4 text-white " href="#"><i
-                                        class="ti-twitter-alt"></i></a></li>
+                                        class="ti-linkedin"></i></a></li>
+
 
                         </ul>
                     </div>
@@ -169,10 +186,7 @@
     <script src="{{ asset('assets/plugins/counto/counTo.js') }}"></script>
     <!-- card slider -->
     <script src="{{ asset('assets/plugins/card-slider/js/card-slider-min.js') }}"></script>
-    <!-- google map -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places">
-    </script>
-    <script src="{{ asset('assets/plugins/google-map/gmap.js') }}"></script>
+
 
     <!-- Main Script -->
     <script src="{{ asset('assets/js/script.js') }}"></script>

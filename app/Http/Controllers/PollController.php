@@ -10,6 +10,14 @@ use Symfony\Component\HttpFoundation\Response;
 
 class PollController extends Controller
 {
+    function __construct()
+    {
+        $this->middleware('permission:polls-list|polls-create|polls-edit|polls-delete', ['only' => ['index', 'store']]);
+        $this->middleware('permission:polls-create', ['only' => ['create', 'store']]);
+        $this->middleware('permission:polls-edit', ['only' => ['edit', 'update']]);
+        $this->middleware('permission:polls-delete', ['only' => ['destroy']]);
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
