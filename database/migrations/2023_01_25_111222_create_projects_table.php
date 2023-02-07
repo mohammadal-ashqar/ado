@@ -18,8 +18,8 @@ return new class extends Migration
             $table->bigInteger("visits")->unsigned()->default(0);
             $table->string('auther');
             $table->string('image');
-            $table->enum('sections',['webDevelopment','branding','digitalMarket','motionGraphic']);
-            $table->string("url");
+            $table->enum('sections',['Web Development','Branding','Digital Market','Motion Graphic']);
+            $table->string("url")->nullable();
             $table->json('files');
             $table->timestamps();
         });

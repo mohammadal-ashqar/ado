@@ -16,9 +16,11 @@ class Service extends Model
             'image'=>'required|mimes:png,jpg,jpeg,gif|max:550',
             'iconName'=>'required|string|max:130',
             'name_ar'=>'required|string|max:255',
+            'context_ar'=>'required|string',
             'content_ar'=>'required|string',
             'list_ar*'=>'required|string|max:130',
             'name_en'=>'required|string|max:255',
+            'context_en'=>'required|string',
             'content_en'=>'required|string',
             'list_en*'=>'required|string|max:130',
         ];
@@ -30,9 +32,11 @@ class Service extends Model
             'image'=>'nullable|mimes:png,jpg,jpeg,gif|max:550',
             'iconName'=>'required|string|max:130',
             'name_ar'=>'required|string|max:255',
+            'context_ar'=>'required|string',
             'content_ar'=>'required|string',
             'list_ar*'=>'required|string|max:130',
             'name_en'=>'required|string|max:255',
+            'context_en'=>'required|string',
             'content_en'=>'required|string',
             'list_en*'=>'required|string|max:130',
         ];

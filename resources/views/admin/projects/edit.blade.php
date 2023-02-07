@@ -15,10 +15,10 @@
             <x-form.select name="sections" lable="القسم">
                 <select name="sections" class="form-select">
                     <option>اختر القسم  </option>
-                    <option value="webDevelopment" @selected($project->sections == 'webDevelopment')>تطوير المواقع</option>
-                    <option value="branding"       @selected($project->sections == 'branding')> الهوية البصرية</option>
-                    <option value="digitalMarket"  @selected($project->sections == 'digitalMarket')> التسويق الكتروني</option>
-                    <option value="motionGraphic"  @selected($project->sections == 'motionGraphic')> موشن جرافيك</option>
+                    <option value="Web Development" @selected($project->sections == 'Web Development')>تطوير المواقع</option>
+                    <option value="Branding"       @selected($project->sections == 'Branding')> الهوية البصرية</option>
+                    <option value="Digital Market"  @selected($project->sections == 'Digital Market')> التسويق الكتروني</option>
+                    <option value="Motion Graphic"  @selected($project->sections == 'Motion Graphic')> موشن جرافيك</option>
                 </select>
             </x-form.select>
 

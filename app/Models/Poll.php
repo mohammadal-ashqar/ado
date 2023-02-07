@@ -13,7 +13,7 @@ class Poll extends Model
     public static function rules()
     {
         return [
-        'image'=>'required|mimes:png,jpg,jpeg,gif|max:255',
+        'image'=>'required|mimes:png,jpg,jpeg,gif|max:550',
         'name_en'=>'required|string|max:255',
         'name_ar'=>'required|string|max:255',
         'content_en'=>'required|string',
@@ -25,7 +25,7 @@ class Poll extends Model
     public static function updateRules()
     {
         return [
-        'image'=>'nullable|mimes:png,jpg,jpeg,gif|max:255',
+        'image'=>'nullable|mimes:png,jpg,jpeg,gif|max:550',
         'name_en'=>'required|string|max:255',
         'name_ar'=>'required|string|max:255',
         'content_en'=>'required|string',

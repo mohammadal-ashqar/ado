@@ -33,7 +33,7 @@
     .navbar .nav-item .nav-link {
 
         padding: 20px;
-        font-size: 25px;
+        font-size: 18px;
 
     }
 </style>
@@ -44,7 +44,7 @@
     <header class="navigation fixed-top">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand" href="{{ route('adomedia.ar.index', 'index') }}"><img
-                    src="{{ asset('assets/images/ado-fulllogo.png') }}" alt="Egen" width="100px"></a>
+                    src="{{ asset('assets/images/ado-fulllogo.png') }}" alt="Egen" width="80px"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
                 aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
                 <i class=" icon-lg   ti-menu  text-dark"></i>
@@ -71,13 +71,16 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="{{ route('adomedia.index', 'contact') }}">Contact</a>
                     </li>
-                    <li class="nav-item dropdown active">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ route('adomedia.ar.index', 'index') }}"><span class="ti-world"></span></a>
+                    </li>
+                    {{-- <li class="nav-item dropdown active">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false"><span class="ti-world"></span></a>
                         <div class="dropdown-menu" style="display: none; ">
                             <a class="dropdown-item" href="{{ route('adomedia.ar.index', 'index') }}">عربي</a>
                         </div>
-                    </li>
+                    </li> --}}
                 </ul>
             </div>
         </nav>

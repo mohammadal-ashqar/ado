@@ -45,8 +45,8 @@
     .navbar .nav-item .nav-link {
         font-family: 'Cairo', sans-serif;
         font-family: 'Tajawal', sans-serif;
-        padding: 25px;
-        font-size: 25px;
+        padding: 20px;
+        font-size: 18px;
 
     }
 
@@ -94,7 +94,7 @@
     <header class="navigation fixed-top">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand" href="{{ route('adomedia.ar.index', 'index') }}"><img
-                    src="{{ asset('assets/images/ado-fulllogo.png') }}" alt="Egen" width="100px"></a>
+                    src="{{ asset('assets/images/ado-fulllogo.png') }}" alt="Egen" width="80px"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
                 aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
                 <i class=" icon-lg   ti-menu  text-dark"></i>
@@ -120,14 +120,17 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="{{ route('adomedia.ar.index', 'contact') }}">توصل معنا</a>
                     </li>
-                    <li class="nav-item active dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ route('adomedia.index', 'index') }}"> <span class="ti-world"></span></a>
+                    </li>
+                    {{-- <li class="nav-item active dropdown">
+                        <a class="nav-link " href="{{ route('adomedia.index', 'index') }}" role="button" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false"><span class="ti-world"></span></a>
                         <div class="dropdown-menu" style="display: none;">
                             <a class="dropdown-item" href="{{ route('adomedia.index', 'index') }}">English</a>
 
                         </div>
-                    </li>
+                    </li> --}}
                 </ul>
             </div>
         </nav>
@@ -154,7 +157,7 @@
                             <li class="list-inline-item"><a class="d-block p-lg-4 text-white " href="#"><i
                                         class="ti-twitter-alt"></i></a></li>
                             <li class="list-inline-item"><a class="d-block p-lg-4 text-white "
-                                    href="https://www.instagram.com/adomedia.ar.ps/"><i class="ti-instagram"></i></a>
+                                    href="https://www.instagram.com/adomedia.ps/"><i class="ti-instagram"></i></a>
                             </li>
                             <li class="list-inline-item"><a class="d-block p-lg-4 text-white " href="#"><i
                                         class="ti-linkedin"></i></a></li>

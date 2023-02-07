@@ -13,32 +13,33 @@
                     <div class="main-settings-menu">
                         <nav class="nav main-nav-column">
 
+
                             <a class="nav-link thumb active mb-2" href="{{ route('admin.index') }}"><i class="fe fe-home"></i>
                                 الرئيسية </a>
 
                             @can('project-list')
                                 <a class="nav-link border-top-0 thumb mb-2" href="{{ route('admin.project.index') }}"><i
-                                        class="fe fe-file"></i> المشاريع </a>
+                                        class="fe fe-layers"></i> المشاريع </a>
                             @endcan
                             @can('package-list')
                                 <a class="nav-link border-top-0 thumb mb-2" href="{{ route('admin.package.index') }}"><i
-                                        class="fe fe-hash"></i>الباقات</a>
+                                        class="fe fe-shopping-cart"></i>الباقات</a>
                             @endcan
                             @can('service-list')
                                 <a class="nav-link border-top-0 thumb mb-2" href="{{ route('admin.service.index') }}"><i
-                                        class="fe fe-video"></i>الخدمات</a>
+                                        class="fe fe-slack"></i>الخدمات</a>
                             @endcan
                             @can('blog-list')
                                 <a class="nav-link border-top-0 thumb mb-2" href="{{ route('admin.blog.index') }}"><i
-                                        class="fe fe-tag"></i>المدونة</a>
+                                        class="fe fe-file-text"></i>المدونة</a>
                             @endcan
                             @can('client-list')
                                 <a class="nav-link border-top-0 thumb mb-2" href="{{ route('admin.client.index') }}"><i
-                                        class="fe fe-map-pin"></i> العملاء</a>
+                                        class="fe fe-user"></i> العملاء</a>
                             @endcan
                             @can('polls-list')
                                 <a class="nav-link border-top-0 thumb mb-2" href="{{ route('admin.polls.index') }}"><i
-                                        class="fe fe-image"></i>الآراء</a>
+                                        class="fe fe-message-circle"></i>الآراء</a>
                             @endcan
                             @can('role-list')
                                 <a class="nav-link border-top-0 thumb mb-2" href="{{ route('admin.role.index') }}"><i
@@ -140,8 +141,8 @@
                             <div id="basicSlider" class="ms-animating">
                                 <div class="MS-content">
                                     <div class="item" style="margin-left: -155.969px;">
-                                        <a href="javascript:void(0);"> <img src="../assets/img/photos/7.jpg"
-                                                alt=""> </a>
+                                        <a href="javascript:void(0);"> <img src="../assets/img/photos/7.jpg" alt="">
+                                        </a>
                                     </div>
 
                                     @foreach ($projects as $i)

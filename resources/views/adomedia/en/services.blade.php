@@ -26,7 +26,7 @@
                   <i class="icon-lg icon-watermark text-white {{ $i->iconName }}"></i>
                 </div>
                <a href="{{ route('adomedia.service',$i->id) }}"> <h4 class="mb-4">{{ $i->name_en }}</h4></a>
-                <p>{{ $i->content_en }}</p>
+                <p>{{ $i->context_en }}</p>
               </div>
             </div>
           </div>

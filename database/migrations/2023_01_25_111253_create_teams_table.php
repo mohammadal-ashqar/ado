@@ -21,10 +21,7 @@ return new class extends Migration
             $table->string('name_ar');
             $table->string('jop_ar');
             $table->string('jop_en');
-            $table->string('facebook');
-            $table->string('instegram');
-            $table->string('behance');
-            $table->string('twiter');
+          
             $table->timestamps();
         });
     }

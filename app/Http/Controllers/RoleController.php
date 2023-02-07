@@ -22,7 +22,7 @@ class RoleController extends Controller
 
     public function index(Request $request)
     {
-        $roles = Role::where('name','!=','admin')->orderBy('id', 'DESC')->paginate(5);
+        $roles = Role::where('name','<>','admin')->orderBy('id', 'DESC')->paginate(5);
         return view('admin.roles.index', compact('roles'));
     }
 

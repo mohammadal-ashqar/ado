@@ -10,6 +10,7 @@
 
             <x-form.input name="iconName" lable="الأيقونة" />
             <x-form.input name="name_ar" lable="الاسم" />
+            <x-form.input name="context_ar" lable="نبذة" />
 
 
 
@@ -17,6 +18,7 @@
             <x-form.hr content="البيانات باللغة الانجليزية"/>
 
             <x-form.input name="name_en" lable="الاسم " />
+            <x-form.input name="context_en" lable="نبذة " />
 
 
             <x-form.hr content="الخدمات "/>

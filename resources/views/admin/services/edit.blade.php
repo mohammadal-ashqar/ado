@@ -11,6 +11,7 @@
 
             <x-form.input name="iconName" lable="الأيقونة" :value="$service->iconName" />
             <x-form.input name="name_ar" lable="الاسم" :value="$service->name_ar" />
+                <x-form.input name="context_ar" lable="نبذة" :value="$service->context_ar" />
 
 
 
@@ -18,6 +19,7 @@
             <x-form.hr content="البيانات باللغة الانجليزية"/>
 
             <x-form.input name="name_en" lable="الاسم " :value="$service->name_en" />
+                <x-form.input name="context_en" lable="نبذة"  :value="$service->context_en"/>
 
 
             <x-form.hr content="الخدمات "/>

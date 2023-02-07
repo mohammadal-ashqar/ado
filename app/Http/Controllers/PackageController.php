@@ -26,7 +26,7 @@ class PackageController extends Controller
     public function index()
     {
         $packages = Package::latest()->get();
-        return view('admin.packages.index',compact('packages'));
+        return view('admin.packages.index', compact('packages'));
     }
 
     /**
@@ -37,7 +37,6 @@ class PackageController extends Controller
     public function create()
     {
         return view('admin.packages.create');
-
     }
 
     /**
@@ -54,7 +53,7 @@ class PackageController extends Controller
             'auther' => Auth::user()->name,
         ]);
         if ($request->hasFile('image')) {
-            $data = $request->except('image','content_en','content_ar');
+            $data = $request->except('image', 'content_en', 'content_ar');
             $file = $request->file('image');
             $name = rand() . time() . $file->getClientOriginalName();
             $path = $file->storeAs('uploads/package', $name, ['disk' => 'public']);
@@ -96,7 +95,7 @@ class PackageController extends Controller
 
         $n = json_decode($package->content_ar);
         $n2 = json_decode($package->content_en);
-        return view('admin.packages.edit',compact('package','n','n2'));
+        return view('admin.packages.edit', compact('package', 'n', 'n2'));
     }
 
     /**
@@ -113,12 +112,12 @@ class PackageController extends Controller
             'auther' => Auth::user()->name
         ]);
         $old_image = $package->image;
-        $data = $request->except('image','content_en','content_ar');
+        $data = $request->except('image', 'content_en', 'content_ar');
         $data['image'] = $old_image;
         $data['content_en'] = json_encode($request->content_en);
         $data['content_ar'] = json_encode($request->content_ar);
         if ($request->hasFile('image')) {
-            $data = $request->except('image','content_en','content_ar');
+            $data = $request->except('image', 'content_en', 'content_ar');
             $file = $request->file('image');
             $name = rand() . time() . $file->getClientOriginalName();
             $path = $file->storeAs('uploads/package', $name, ['disk' => 'public']);

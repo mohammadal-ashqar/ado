@@ -16,12 +16,7 @@
             <x-form.input name="jop_en" lable=" الوظيفة انجليزي" />
             <x-form.hr content="حسابات التواصل الاجتماعي" />
 
-            <x-form.input name="facebook" lable="فيس بوك" type="url" />
-            <x-form.input name="instegram" lable="انستقرام" type="url" />
-            <x-form.input name="behance" lable="behance" type="url" />
-            <x-form.input name="twiter" lable="تويتر" type="url" />
-
-
+    
             <x-slot name="footer">
                 <x-form.card-footer>
                     <x-form.button title="إضافة" />

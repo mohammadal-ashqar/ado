@@ -62,7 +62,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  font-size: 44px;
+  font-size: 33px;
 }
 @media (max-width: 575px) {
   h2, .h2 {
@@ -559,7 +559,7 @@ textarea.form-control {
 .navbar .nav-item .nav-link {
   font-family: "Poppins", sans-serif;
   padding: 15px;
-  font-size: 18px;
+  font-size: 10px;
 }
 .navbar .nav-item.active {
   font-weight: bold;

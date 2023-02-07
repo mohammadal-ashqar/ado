@@ -107,7 +107,7 @@ class ServiceController extends Controller
      */
     public function update(Request $request, Service $service)
     {
-        $request->validate(Service::rules());
+        $request->validate(Service::updateRules());
 
         $request->merge([
             'auther' => Auth::user()->name,

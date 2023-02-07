@@ -14,9 +14,25 @@
     <!-- progressbar -->
     <section class="section pb-0">
         <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-10 mx-auto text-center">
+                    <div class="row">
+                        <div class="col-lg-10 mx-auto text-center">
+                            <h2 class="section-title">About Us</h2>
+
+                            <div class="section-border"></div>
+                        </div>
+                    </div>
+                    <p class="lead">A company specializing in the fields of programming, design and montage, as well
+                        as providing technical and creative solutions in all fields, with the participation of a
+                        specialized team. Our goal is to ensure high quality and quality in our clients' various
+                        projects and to strive to provide the best services at the highest value.</p>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-md-6 mb-4 mb-lg-0">
-                    <img src="{{ asset('assets/images/about/about-us.png') }}" alt="about" class="img-fluid">
+                    <img src="{{ asset('assets/images/adoabout.png') }}" alt="about" class="img-fluid "
+                        style="width:35%">
                 </div>
                 <div class="col-md-6 col-lg-5">
                     <div class="progress-block">
@@ -126,18 +142,17 @@
                     <div id="slider" class="ui-card-slider bg-contain">
 
                         @forelse ($polls as $i)
-                        <div class="slide">
-                            <div class="card text-center">
-                                <div class="card-body px-5 py-4">
-                                    <img src="{{ asset('storage/'.$i->image) }}" alt="user-1"
-                                        class="img-fluid rounded-circle mb-4">
-                                    <h4 class="text-secondary">{{ $i->name_en }}</h4>
-                                    <p>“{{ $i->content_en }}”</p>
+                            <div class="slide">
+                                <div class="card text-center">
+                                    <div class="card-body px-5 py-4">
+                                        <img src="{{ asset('storage/' . $i->image) }}" alt="user-1"
+                                            class="img-fluid rounded-circle mb-4">
+                                        <h4 class="text-secondary">{{ $i->name_en }}</h4>
+                                        <p>“{{ $i->content_en }}”</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         @empty
-
                         @endforelse
 
                     </div>
@@ -147,47 +162,72 @@
     </section>
     <!-- /testimonial-slider -->
 
- <!-- pricing -->
-<section class="section pb-0">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-10 mx-auto text-center">
-          <h2>Our Smart Pricing Table</h2>
-          <div class="section-border"></div>
-        </div>
-      </div>
-      <div class="row">
-          @forelse ($packages as $i)
-          @php
-          $list = json_decode($i->content_en)
-          @endphp
-          <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-              <div class="card bottom-shape bg-secondary pt-4 pb-5">
-                <div class="card-body text-center">
-                  <h4 class="text-white">{{ $i->title_en }}</h4>
-                  <p class="text-white mb-4">$ <span class="display-3 font-weight-bold vertical-align-middle">{{ $i->price }}</span></p>
-
-                  <ul class="list-unstyled mb-5">
-                  @forelse ($list as $i)
-                  <li class="text-white mb-3">{{ $i }}</li>
-                  @empty
-
-                  @endforelse
-
-                  </ul>
-                  <a href="tel:+970597676950" target="_blank" class="btn btn-outline-light">Try it now</a>
+    <!-- pricing -->
+    <section class="section pb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto text-center">
+                    <h2>Our Packages</h2>
+                    <div class="section-border"></div>
                 </div>
-              </div>
             </div>
-          @empty
+            <div class="row">
+                @forelse ($packages as $i)
+                    @php
+                        $list = json_decode($i->content_en);
+                    @endphp
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                        <div class="card bottom-shape bg-secondary pt-4 pb-5">
+                            <div class="card-body text-center">
+                                <h4 class="text-white">{{ $i->title_en }}</h4>
+                                <p class="text-white mb-4">$ <span
+                                        class="display-3 font-weight-bold vertical-align-middle">{{ $i->price }}</span>
+                                </p>
 
-          @endforelse
+                                <ul class="list-unstyled mb-5">
+                                    @forelse ($list as $i)
+                                        <li class="text-white mb-3">{{ $i }}</li>
+                                    @empty
+                                    @endforelse
 
-      </div>
-    </div>
-  </section>
-  <!-- /pricing -->
+                                </ul>
+                                <a href="tel:+972 59-767-6950" target="_blank" class="btn btn-outline-light">Try it
+                                    now</a>
+                            </div>
+                        </div>
+                    </div>
+                @empty
 
+                @endforelse
 
+            </div>
+        </div>
+    </section>
+    <!-- /pricing -->
+
+    <section class="section-sm">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="client-logo-slider d-flex align-items-center slick-initialized slick-slider">
+                        <div class="slick-list draggable">
+                            <div class="slick-track"
+                                style="opacity: 1; width: 5550px; transform: translate3d(-1998px, 0px, 0px);">
+                                @forelse ($clients as $i)
+                                <a href="{{ $i->url }}"
+                                class="text-center d-block outline-0 p-4 slick-slide slick-cloned"
+                                data-slick-index="-4" aria-hidden="true" tabindex="-1"
+                                style="width: 222px;"><img class="d-unset img-fluid"
+                                    src="{{ asset('storage/'.$i->image) }}" alt="client-logo"></a>
+                                @empty
+
+                                @endforelse
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </x-ado-media.master>

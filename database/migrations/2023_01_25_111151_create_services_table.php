@@ -18,10 +18,13 @@ return new class extends Migration
             $table->string('auther');
             $table->bigInteger("visits")->unsigned()->default(0);
             $table->string('iconName');
+            $table->string('image');
             $table->string('name_ar');
+            $table->text('context_ar');
             $table->text('content_ar');
             $table->json('list_ar');
             $table->string('name_en');
+            $table->text('context_en');
             $table->text('content_en');
             $table->json('list_en');
             $table->timestamps();

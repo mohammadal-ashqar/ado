@@ -14,10 +14,10 @@
             <x-form.select name="sections" lable="القسم">
                 <select name="sections" class="form-select">
                     <option>اختر القسم  </option>
-                    <option value="webDevelopment">تطوير المواقع</option>
-                    <option value="branding"> الهوية البصرية</option>
-                    <option value="digitalMarket"> التسويق الكتروني</option>
-                    <option value="motionGraphic"> موشن جرافيك</option>
+                    <option value="Web Development">تطوير المواقع</option>
+                    <option value="Branding"> الهوية البصرية</option>
+                    <option value="Digital Market"> التسويق الكتروني</option>
+                    <option value="motioMotion Graphic"> موشن جرافيك</option>
                 </select>
             </x-form.select>
 

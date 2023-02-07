@@ -14,10 +14,10 @@ class Project extends Model
     {
         return [
 
-            'image'=>'required|image|mimes:png,jpeg,jpg,gif|max:255',
-            'sections'=>'required|in:webDevelopment,branding,digitalMarket,motionGraphic',
-            'url'=>'required|string|max:255',
-            'files*'=>'nullable|image|mimes:png,jpeg,jpg,gif|max:5500',
+            'image'=>'required|image|mimes:png,jpeg,jpg,gif|max:2550',
+            'sections'=>'required|in:Web Development,Branding,Digital Market,Motion Graphic',
+            'url'=>'nullable|string|max:255',
+            'files*'=>'nullable|image|mimes:png,jpeg,jpg,gif|max:6500',
                 ];
     }
 
@@ -26,9 +26,9 @@ class Project extends Model
         return [
 
             'image'=>'nullable|image|mimes:png,jpeg,jpg,gif|max:2550',
-            'sections'=>'required|in:webDevelopment,branding,digitalMarket,motionGraphic',
-            'url'=>'required|string|max:255',
-            'files*'=>'nullable|image|mimes:png,jpeg,jpg,gif|max:5500',
+            'sections'=>'required|in:Web Development,Branding,Digital Market,Motion Graphic',
+            'url'=>'nullable|string|max:255',
+            'files*'=>'nullable|image|mimes:png,jpeg,jpg,gif|max:6500',
         ];
     }
 

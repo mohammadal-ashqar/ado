@@ -13,7 +13,7 @@ class Client extends Model
     public static function rules()
     {
         return [
-        'image'=>'required|mimes:png,jpg,jpeg,gif|max:255',
+        'image'=>'required|mimes:png,jpg,jpeg,gif|max:550',
         'url'=>'required|string|max:255|url',
 
     ];
@@ -23,7 +23,7 @@ class Client extends Model
     public  static function updateRules()
     {
         return [
-            'image'=>'nullable|mimes:png,jpg,jpeg,gif|max:255',
+            'image'=>'nullable|mimes:png,jpg,jpeg,gif|max:550',
             'url'=>'required|string|max:255|url',
 
         ];
